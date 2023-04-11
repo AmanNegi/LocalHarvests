@@ -5,12 +5,17 @@ import HomePage from "./pages/home";
 import "@fortawesome/fontawesome-free/css/all.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import About from "./pages/about";
+import Shop from "./pages/Shop";
 
 const router = createBrowserRouter([
   { path: "/", element: <HomePage /> },
   {
     path: "/about",
     element: <About />,
+  },
+  {
+    path: "/shop",
+    element: <Shop />,
   },
 ]);
 
