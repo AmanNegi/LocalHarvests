@@ -12,11 +12,11 @@ import onion from "../assets/items/onion.png";
 
 // Fruits
 import banana from "../assets/items/banana.png";
-import apple from "../assets/items/apple.png";
-import guava from "../assets/items/guava.png";
-import kiwi from "../assets/items/kiwi.png";
-import watermelon from "../assets/items/watermelon.png";
-import grapes from "../assets/items/grapes.png";
+import apple from "../assets/items/Apple.png";
+import guava from "../assets/items/Guava.png";
+import kiwi from "../assets/items/Kiwi.png";
+import watermelon from "../assets/items/Watermelon.png";
+import grapes from "../assets/items/Grapes.png";
 import pomegranate from "../assets/items/Pomegranate.png";
 
 export const shopItems = [
@@ -26,9 +26,9 @@ export const shopItems = [
   { name: "Cabbage", price: 30, image: cabbage2 },
 
   { name: "Potato", price: 20, image: potato },
-  { name: "Peas", price: 50, image:  peas},
-  { name: "Lady Finger", price: 20, image:  ladyfinger},
-  { name: "Onion", price: 80, image:  onion},
+  { name: "Peas", price: 50, image: peas },
+  { name: "Lady Finger", price: 20, image: ladyfinger },
+  { name: "Onion", price: 80, image: onion },
 ];
 
 export const fruitItems = [
