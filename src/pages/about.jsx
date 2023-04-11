@@ -25,7 +25,7 @@ function About() {
       <main className="mt-[8vh]">
         <section className=" flex flex-col-reverse md:flex-row ">
           <div className="flex flex-col w-[100%] md:w-[50%] justify-center px-5 md:px-20 md:py-20">
-            <h1 className=" text-2xl md:text-5xl font-bold mb-5 mt-8 md:mt-0 tracking-tight text-darkColor ">
+            <h1 className=" text-3xl md:text-5xl font-bold mb-5 mt-8 md:mt-0 tracking-tight text-darkColor ">
               The Problem
             </h1>
             <p className="leading-relaxed text-semiDarkColor">
@@ -55,7 +55,7 @@ function About() {
           />
 
           <div className="flex flex-col w-[100%] md:w-[50%] justify-center px-5 md:px-20">
-            <h1 className="text-5xl font-bold mb-5 mt-8 md:mt-0 tracking-wide text-darkColor">
+            <h1 className=" text-3xl md:text-5xl font-bold mb-5 mt-8 md:mt-0 tracking-wide text-darkColor">
               The Solution
             </h1>
             <p className="leading-relaxed text-semiDarkColor">

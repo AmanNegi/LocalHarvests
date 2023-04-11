@@ -4,7 +4,7 @@ import { fruitItems, shopItems } from "../data/data";
 import veggies_banner from "../assets/veggies_banner.png";
 import fruits_banner from "../assets/fruits_banner.png";
 
-import landing_bg from "../assets/landing_bg.png";
+import parallax_bg from "../assets/parallax_bg.png";
 import Button from "../components/Button";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
@@ -37,10 +37,10 @@ function Shop() {
         <section
           className="bg-cover bg-right bg-fixed relative"
           style={{
-            backgroundImage: `url(${landing_bg})`,
+            backgroundImage: `url(${parallax_bg})`,
           }}
         >
-          <div className="overlay absolute inset-0 bg-black opacity-50"></div>
+          {/* <div className="overlay absolute inset-0 bg-black opacity-50"></div> */}
 
           <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
             <h2 className="text-white text-4xl sm:text-5xl md:text-6xl font-bold mb-8 relative">

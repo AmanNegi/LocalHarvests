@@ -71,7 +71,7 @@ function NavBarItem({ text = "NavItem", route = "/" }) {
   return (
     <div
       onClick={() => navigate(route)}
-      className="hidden lg:flex md:flex items-center text-center h-[100%] px-5 mx-5 hover:bg-slate-200 hover:text-green-600 "
+      className="hidden lg:flex md:flex items-center text-center h-[100%] px-5 mx-5 hover:bg-green-100 hover:text-green-800 "
     >
       <h1 className="text-lg ">{text}</h1>
     </div>

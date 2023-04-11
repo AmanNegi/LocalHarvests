@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import { motion } from "framer-motion";
 import { gridItems, galleryImages, data, features } from "../data/data";
+import { useNavigate } from "react-router-dom";
 
 function HomePage() {
   return (
@@ -22,7 +23,7 @@ function HomePage() {
               initial={{ x: -100 }}
               whileInView={{ x: 0 }}
               viewport={{ once: true }}
-              className="w-[100%] p-5 md:w-[30%] my-5 flex flex-col justify-center items-center bg-gradient-to-b from-green-300 to-green-200"
+              className="w-[100%] p-5 md:w-[30%] my-5 flex flex-col justify-center items-center bg-green-200 rounded-lg"
             >
               <h1 className="text-4xl font-bold text-green-800">
                 Our Features
@@ -83,7 +84,7 @@ function TopSection() {
     >
       <div className="absolute inset-0 bg-gradient-to-b from-[#00000065] to-[#000000ac]"></div>
 
-      <div className="absolute top-[25vh] left-5 bg-opacity-50 p-10 ">
+      <div className="absolute top-[15vh] md:top-[25vh] left-2 md:left-5 bg-opacity-50 p-10 ">
         <motion.h1
           initial={{ x: -250, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -109,18 +110,10 @@ function TopSection() {
           transition={{ duration: 1, delay: 0.5 }}
           className="flex gap-4 mt-5"
         >
-          <Button text="Learn More"  path="/about"/>
+          <Button text="Learn More" path="/about" />
           <Button text="Explore Products" path="/shop" />
         </motion.div>
       </div>
-
-      {/* [Headline in bold font]: Support Local Farmers and Get Fresh, High-Quality Products
-
-[Subheadline]: Welcome to [Your Website Name], where you can browse and purchase products directly from local farmers in your area.
-
-[Body text]: Our mission is to empower local farmers and promote sustainable agriculture practices by providing a platform where they can list their products at their own prices. By buying directly from local farmers, you can enjoy fresh, high-quality products while supporting your community.
-
-[Call to action button in bold font]: Browse Products Now */}
     </section>
   );
 }
@@ -163,6 +156,7 @@ function OurMottoSection() {
 }
 
 function ExploreProducts() {
+  const navigate = useNavigate();
   return (
     <section>
       <div>
@@ -198,7 +192,10 @@ function ExploreProducts() {
                     />
 
                     <div className="bg-black m-2 bg-opacity-10 hidden group-hover:flex justify-center items-center absolute inset-0 rounded-md ">
-                      <button className="bg-green-500 text-white px-5 py-[2vh] rounded-md">
+                      <button
+                        onClick={() => navigate("/shop")}
+                        className="bg-green-500 text-white px-5 py-[2vh] rounded-md"
+                      >
                         ADD TO CART
                       </button>
                     </div>
@@ -218,7 +215,7 @@ function ExploreProducts() {
 
 function OurGallerySection() {
   return (
-    <section className="bg-slate-200 border-t-[1px] text-gray-800 mt-10">
+    <section className="border-t-[1px] border-green-200 border-dashed text-gray-800 mt-10">
       <div className="container px-5 py-10 mx-auto">
         <div className="flex flex-col text-center w-full mb-2">
           <h1 className="text-3xl lg:text-4xl font-bold ">Our Gallery</h1>
