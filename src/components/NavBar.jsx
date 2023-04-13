@@ -3,6 +3,7 @@ import logo from "../assets/logo.png";
 import Button from "../components/Button";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   const [drawerVisible, setdrawerVisible] = useState(false);
@@ -17,7 +18,7 @@ function NavBar() {
         className="fixed top-0 z-[2] h-[8vh] w-[100%] bg-white  flex px-2 md lg:px-16  items-center shadow-md "
       >
         {/* <h1>LOGO</h1> */}
-        <img className="h-20  py-2 object-contain" src={logo} alt="" />
+        <Link to = "/"><img className="h-20  py-2 object-contain" src={logo} alt="" /></Link>
         <div className="flex flex-1"></div>
 
         <NavBarItem text="Home" />
