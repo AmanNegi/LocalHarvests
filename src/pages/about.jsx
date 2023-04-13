@@ -53,7 +53,6 @@ function About() {
               alt=""
             />
 
-            <div className="overlay absolute inset-0 bg-black bg-opacity-20"></div>
           </div>
 
           <div className="flex flex-col w-[100%] md:w-[50%] justify-center px-5 md:px-20">
