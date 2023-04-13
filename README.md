@@ -1,4 +1,10 @@
 # Local Harvests 🌾
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0ebecb22-dfcd-4d12-a9ef-0bf73f168c7f/deploy-status)](https://app.netlify.com/sites/localharvests/deploys)
+
 > Find the live website [here](https://localharvests.netlify.app)
 
  1️⃣  |   2️⃣
