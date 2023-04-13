@@ -20,7 +20,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <main className="font-poppins scroll-smooth border-box">
+  <main className="font-poppins scroll-smooth border-box overflow-hidden">
     <RouterProvider router={router}></RouterProvider>
   </main>
 );

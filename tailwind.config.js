@@ -13,7 +13,6 @@ export default {
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
-        deliciousHandrawn: ["Delicious Handrawn", "poppins"],
       },
     },
   },

@@ -5,7 +5,6 @@ import veggies_banner from "../assets/veggies_banner.png";
 import fruits_banner from "../assets/fruits_banner.png";
 
 import parallax_bg from "../assets/parallax_bg.png";
-import Button from "../components/Button";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
 
@@ -16,7 +15,7 @@ function Shop() {
 
   return (
     <>
-      <div className="bg-slate-100">
+      <div className="">
         <NavBar />
         <div className="h-[8vh]"></div>
 

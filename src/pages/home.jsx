@@ -1,4 +1,4 @@
-import landing_bg from "../assets/landing_bg.png";
+import landing_bg from "../assets/landing_bg.jpg";
 
 import explore_image from "../assets/explore.png";
 
@@ -9,8 +9,13 @@ import NavBar from "../components/NavBar";
 import { motion } from "framer-motion";
 import { gridItems, galleryImages, data, features } from "../data/data";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 function HomePage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <NavBar />
@@ -20,12 +25,13 @@ function HomePage() {
         <section className="mx-8 md:mx-28 ">
           <div className=" flex flex-col md:flex-row  ">
             <motion.div
-              initial={{ x: -100 }}
-              whileInView={{ x: 0 }}
+              initial={{ x: -300, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ delay: 0.35, duration: 1 }}
               viewport={{ once: true }}
-              className="w-[100%] p-5 md:w-[30%] my-5 flex flex-col justify-center items-center bg-green-200 rounded-lg"
+              className="w-[100%] p-5 md:w-[30%] my-5 flex flex-col justify-center items-center bg-green-300 rounded-lg"
             >
-              <h1 className="text-4xl font-bold text-green-800">
+              <h1 className="text-4xl font-bold text-green-900">
                 Our Features
               </h1>
             </motion.div>
@@ -33,19 +39,28 @@ function HomePage() {
               {features.map((e, i) => {
                 return (
                   <motion.div
-                    transition={{ delay: 0.25, duration: 1 }}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    key={i}
-                    className="p-8 bg-green-100 h-[100%] w-[100%] flex flex-col justify-evenly rounded-lg"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.05 }}
                   >
-                    <div className="bg-green-400 rounded-full h-[75px] w-[75px] flex justify-center items-center">
-                      <i className={`${e.icon} text-4xl text-white`}></i>
-                    </div>
+                    <motion.div
+                      transition={{ delay: 0.25, duration: 1 }}
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                      key={i}
+                      className="group p-8  bg-green-200 h-[100%] w-[100%] flex flex-col justify-evenly rounded-lg"
+                    >
+                      <div className="  bg-green-400 rounded-full h-[75px] w-[75px] flex justify-center items-center">
+                        <motion.i
+                          className={`${e.icon} text-4xl text-white `}
+                        ></motion.i>
+                      </div>
 
-                    <h1 className="text-2xl font-bold">{e.title}</h1>
-                    <p className="text-gray-600">{e.description}</p>
+                      <h1 className="text-2xl font-bold  ">{e.title}</h1>
+                      <p className="text-black text-opacity-50">
+                        {e.description}
+                      </p>
+                    </motion.div>
                   </motion.div>
                 );
               })}
@@ -136,12 +151,13 @@ function OurMottoSection() {
                 initial={{ scale: 1 }}
                 whileHover={{ scale: 1.1 }}
                 key={e.name}
-                className="flex flex-row  flex-1 border-[2px] border-slate-200 p-[8px] rounded-lg text-center mb-1  hover:bg-green-500 hover:text-white hover:border-white hover:border-opacity-20"
+                className="group flex flex-row  flex-1 border-[2px] border-slate-200 p-[8px] rounded-lg text-center mb-1  hover:bg-green-500 hover:text-white hover:border-white hover:border-opacity-20"
               >
                 <div className="flex flex-1 border-dashed  justify-center items-center border-[2px] border-slate-200 px-3 py-2 rounded-lg hover:border-white hover:border-opacity-30">
                   <i
                     className={
-                      "text-4xl pr-2 hover:text-white opacity-60 " + e.icon
+                      "text-4xl pr-2 text-green-400 group-hover:text-white " +
+                      e.icon
                     }
                   />
                   <p className="text-lg">{e.name}</p>
@@ -202,7 +218,7 @@ function ExploreProducts() {
                   </div>
                   <div className="flex-1"></div>
                   <h1 className="text-lg">{e.name}</h1>
-                  <h2 className="font-bold">$80.0</h2>
+                  <h2 className="font-bold">₹ 80.0</h2>
                 </div>
               );
             })}

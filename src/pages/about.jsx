@@ -1,6 +1,4 @@
 import NavBar from "../components/NavBar";
-import about_banner from "../assets/about_banner.png";
-import home_banner from "../assets/home_banner.png";
 import about_img from "../assets/about_img.jpg";
 import about_img_2 from "../assets/about_img_2.jpg";
 import about_img_3 from "../assets/about_img_3.jpg";
@@ -25,7 +23,7 @@ function About() {
       <main className="mt-[8vh]">
         <section className=" flex flex-col-reverse md:flex-row ">
           <div className="flex flex-col w-[100%] md:w-[50%] justify-center px-5 md:px-20 md:py-20">
-            <h1 className=" text-3xl md:text-5xl font-bold mb-5 mt-8 md:mt-0 tracking-tight text-darkColor ">
+            <h1 className=" text-3xl md:text-5xl font-bold mb-5 mt-8 md:mt-0 tracking-tight text-green-900 ">
               The Problem
             </h1>
             <p className="leading-relaxed text-semiDarkColor">
@@ -45,17 +43,21 @@ function About() {
 
       <main className="mt-[8vh] mb-5">
         <section className=" flex flex-col md:flex-row">
-          <motion.img
-            initial={{ x: -250, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="w-[100%] md:w-[50%] object-cover"
-            src={about_img_2}
-            alt=""
-          />
+          <div className="w-[100%] md:w-[50%] object-cover relative">
+            <motion.img
+              initial={{ x: -250, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="w-[100%] object-cover"
+              src={about_img_2}
+              alt=""
+            />
+
+            <div className="overlay absolute inset-0 bg-black bg-opacity-20"></div>
+          </div>
 
           <div className="flex flex-col w-[100%] md:w-[50%] justify-center px-5 md:px-20">
-            <h1 className=" text-3xl md:text-5xl font-bold mb-5 mt-8 md:mt-0 tracking-wide text-darkColor">
+            <h1 className=" text-3xl md:text-5xl font-bold mb-5 mt-8 md:mt-0 tracking-wide text-green-900">
               The Solution
             </h1>
             <p className="leading-relaxed text-semiDarkColor">
@@ -78,7 +80,6 @@ function About() {
             <h1 className="mb-10"> Supporting</h1>
             आत्मनिर्भर भारत
           </h2>
-          {/* <Button text="Shop Now" /> */}
         </div>
       </section>
 

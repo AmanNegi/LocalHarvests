@@ -8,7 +8,7 @@ function Button({ text = "Button", additionalClasses = "", path = "/" }) {
       onClick={() => {
         navigate(path);
       }}
-      className={`bg-green-500 hover:bg-opacity-80 text-sm md:text-lg lg:text-lg rounded-md py-2 px-4 text-white ${additionalClasses}`}
+      className={`bg-green-500 hover:bg-opacity-80 text-sm md:text-lg lg:text-lg rounded-md py-3 px-4 text-white ${additionalClasses}`}
     >
       {text}
     </button>
